@@ -1,19 +1,37 @@
 "use strict";
 
-function sumTwo(a, b) {
-    // sums two passed arguments
+function uselessFlight(schedule) {
 
     // your code here
-    return 0;
+    return undefined;
 }
 
 var assert = require('assert');
 if (!global.is_checking) {
     console.log('Example:');
-    console.log(sumTwo(3, 2));
+    console.log(uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]));
 
     // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(sumTwo(3, 2), 5);
-    assert.equal(sumTwo(5, 7), 12);
+    assert.deepEqual(uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]), [2]);
+    assert.deepEqual(uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 90]]), []);
+    assert.deepEqual(uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 40]]), []);
+    assert.deepEqual(uselessFlight([['A', 'C', 10],
+  ['C', 'B', 10],
+  ['C', 'E', 10],
+  ['C', 'D', 10],
+  ['B', 'E', 25],
+  ['A', 'D', 20],
+  ['D', 'F', 50],
+  ['E', 'F', 90]]), [4, 7]);
+
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
+    

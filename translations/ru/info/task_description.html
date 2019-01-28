@@ -1,0 +1,64 @@
+<!-- Describe task in general -->
+<div class="story for_info_only">
+<p> - Шеф, у нас есть новая рассписание полетов. Осталось только поставить подпись и мы готовы запускать.</p>
+
+<p> - Ого, столько самолетов. Я хочу понять нам действительно нужно столько самолетов?</p>
+
+<p> - Конечно.</p>
+
+<p> - А давайте проверим?</p>
+</div>
+
+<p>Данная задача - это продолжение миссии <a href="/mission/the-cheapest-flight/">Cheapest Flights</a></p>
+
+<p>Ваша задача, имея рассписание самолетов узнать, все ли рейсы действительно необходимы. </p>
+
+<p>Например: Если из точки А в точку С можно долететь напряму на $100, а можно и через точку B (из А в B и из B в C) за $90, то соединение A-C - не нужно. Но если цена из А в C будет $90 или меньше, то это соединение остается в рассписании</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Массив всех возможных соединений. Каждый элемент в миссиве - это тоже массив из 3х элементов - Первый город, второй город и цена перелета.
+</p>
+
+<p>
+    <strong>Output: </strong> Массив индексов перелетов, которые являются ненужными.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]) == [2]
+uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 90]]) == []
+</pre>
+{% else %}
+<pre class="brush: python">useless_flight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]) == [2]
+useless_flight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 90]]) == []
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    <i>(math is used everywhere)</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Precondition:</strong>
+    <i>both given ints should be between -1000 and 1000</i>
+</p>

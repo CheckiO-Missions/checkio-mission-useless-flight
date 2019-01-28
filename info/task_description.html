@@ -25,12 +25,20 @@
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: javascript">uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]) == [2]
+uselessFlight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 90]]) == []
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
+<pre class="brush: python">useless_flight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 100]]) == [2]
+useless_flight([['A', 'B', 50],
+  ['B', 'C', 40],
+  ['A', 'C', 90]]) == []
 </pre>
 {% endif %}
 </div>
