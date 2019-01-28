@@ -1,20 +1,27 @@
 <!-- Describe task in general -->
+<div class="story for_info_only">
+<p> - Chief, we have a new flight schedule. It just require your signature and we are ready to launch.</p>
 
-<p>
-    Sum two passed ints
-</p>
+<p> - Wow, so many planes! I’d like to make sure that we really need so many of them.</p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
+<p> - Of course.</p> 
+
+<p> - Let’s check!</p>
+</div>
+
+<p>This task is a continuation of the <a href="/mission/the-cheapest-flight/">“Cheapest Flights”</a> mission.</p>
+
+<p>Here you have a flight schedule by which you need to find out whether all flights are really necessary.</p>
+
+<p>For example: If from the point A to point C you can fly directly for $ 100, but you can also go through the point B (from A to B, and then from B to C) for $ 90, then connection A – C isn’t really needed. But if the price from A to C is $ 90 or less, then this connection remains on the schedule.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> An array of all possible connections. Each element in the array is also an array of 3 elements: the first city, second city and flight price.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> An array of the unnecessary flight indices.
 </p>
 
 
@@ -42,7 +49,7 @@ useless_flight([['A', 'B', 50],
 </pre>
 {% endif %}
 </div>
-<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- Here you can explain how it can be used in development -->
 <!-- The section is optional -->
 <p class="for_info_only">
     <strong>How it is used: </strong>
